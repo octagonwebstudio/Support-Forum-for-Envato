@@ -30,7 +30,7 @@ If you want to contribute, go to our [Envato Support Forum GitHub Repository](ht
 
 ## Liked Envato Support Forum? ##
 
-Any doubts? [Knowledgebase](https://doc.octagonwebstudio.com/octagon-kc-elements/)  
+Any doubts? [Knowledgebase](https://support.octagonwebstudio.com)
 
 
 ## Requirements ##
