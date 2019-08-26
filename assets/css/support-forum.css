@@ -1,0 +1,65 @@
+/*!
+ * Envato Support Forum CSS v1.0
+ *
+ * 
+ * Copyright (c) octagon web studio
+ *
+ */
+
+/* ---------------------------------------------------------------------------
+ * Verfication Form
+------------------------------------------------------------------------------ */
+
+.envato-verify-form-wrap {
+    text-align: center;
+    background: #fff;
+    margin: 0 auto;
+    padding: 50px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.envato-verify-form .title {
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.envato-verify-form .desc {
+    margin: 0 0 50px 0;
+}
+
+.envato-verify-form .field {
+    margin: 0 0 25px 0;
+}
+
+.envato-verify-form .field:last-child {
+    margin: 0;
+}
+
+.envato-verify-form .text,
+.envato-verify-form .btn {
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #f4f4f4;
+    border-radius: 4px;
+}
+
+.envato-verify-form .btn {
+    font-size: 15px;
+    font-weight: 600;
+    color: #566fff;
+    text-align: center;
+    line-height: 1;
+    background: transparent;
+    padding: 16px 28px;
+    width: 100%;
+    display: inline-block;
+    border: 1px solid #566fff;
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+.notices {
+    color: #ef2525;
+}

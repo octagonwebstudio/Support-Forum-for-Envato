@@ -1,0 +1,107 @@
+# Copyright (C) 2019 Octagon Web Studio
+# This file is distributed under the This WordPress plugin is comprised of two parts: (1) The PHP code and integrated HTML are licensed under the GPL license as is WordPress itself.  You will find a copy of the license text in the same directory as this text file. Or you can read it here: http://wordpress.org/about/gpl/ (2) All other parts of the plugin including, but not limited to the CSS code, images, and design are licensed according to the license purchased. Read about licensing details here: http://wordpress.org/about/gpl/.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Envato Support Forum\n"
+"POT-Creation-Date: 2019-08-15 05:22+0530\n"
+"PO-Revision-Date: 2018-02-12 16:30+0530\n"
+"Last-Translator: Octagon <octagonwebstudio@gmail.com>\n"
+"Language-Team: Octagon Web Studio <octagonwebstudio@gmail.com>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.2.3\n"
+"X-Poedit-KeywordsList: _n;_e;_x;__;esc_html__;esc_html_e;esc_html_x;"
+"esc_attr__;esc_attr_e;esc_attr_x\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/class-admin-hooks.php:38 includes/class-admin-hooks.php:39
+#: views/html-licence-table.php:18
+msgid "Licenses"
+msgstr ""
+
+#: includes/class-admin-hooks.php:72 includes/class-admin-hooks.php:168
+#: includes/class-license-table.php:25
+msgid "Purchase Codes"
+msgstr ""
+
+#: includes/class-admin-hooks.php:107
+msgid "Purchaser"
+msgstr ""
+
+#: includes/class-admin-hooks.php:169
+msgid "Items"
+msgstr ""
+
+#: includes/class-bbp-metabox.php:39
+msgid "Support Item:"
+msgstr ""
+
+#: includes/class-bbp-metabox.php:44
+msgid "Choose Item"
+msgstr ""
+
+#: includes/class-bbp-settings.php:35
+msgid "Envato Support Forum"
+msgstr ""
+
+#: includes/class-bbp-settings.php:57
+msgid "Envato API Token"
+msgstr ""
+
+#: includes/class-license-table.php:24 includes/class-license-table.php:204
+msgid "Purchase Code"
+msgstr ""
+
+#: includes/class-license-table.php:93
+msgid "Purchase codes not avaliable."
+msgstr ""
+
+#: includes/class-license-table.php:134 includes/class-license-table.php:158
+#: includes/class-license-table.php:170
+#, php-format
+msgid "<p>%s</p>"
+msgstr ""
+
+#: includes/class-license-table.php:146
+#, php-format
+msgid "<p>%d</p>"
+msgstr ""
+
+#: includes/class-license-table.php:205
+msgid "Envato Buyer"
+msgstr ""
+
+#: includes/class-license-table.php:206
+msgid "Item Name"
+msgstr ""
+
+#: includes/class-license-table.php:207
+msgid "Item ID"
+msgstr ""
+
+#: includes/class-license-table.php:208
+msgid "License Type"
+msgstr ""
+
+#: includes/class-license-table.php:209
+msgid "User"
+msgstr ""
+
+#: includes/class-support-forum.php:33
+msgid ""
+"Envato Support Forum is enabled but not effective. It requires bbPress in "
+"order to work."
+msgstr ""
+
+#: includes/class-support-forum.php:49
+msgid "License Verification"
+msgstr ""
+
+#: includes/class-support-forum.php:213
+msgid "Envato Purchase Code"
+msgstr ""
