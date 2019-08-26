@@ -32,6 +32,7 @@ If you want to contribute, go to our [Envato Support Forum GitHub Repository](ht
 
 Any doubts? [Knowledgebase](https://doc.octagonwebstudio.com/octagon-kc-elements/)  
 
+
 ## Requirements ##
 
 Simply install as a normal WordPress plugin and activate and it requires bbPress.
@@ -58,6 +59,15 @@ Simply install as a normal WordPress plugin and activate and it requires bbPress
 ## Notes ##
 
 * It requires bbPress should be activated.
+
+
+## Envato Support Forum Pro ##
+
+* Purchase code lists table( Admin ).
+* Purchase code lists front end( Purchaser ).
+* User can add purchase code in front end.
+
+Join the elite web professionals who enjoy [Envato Support Forum Pro!](https://market.octagonwebstudio.com/product/envato-support-forum-pro/)
 
 
 ## Frequently Asked Questions ##

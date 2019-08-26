@@ -17,19 +17,18 @@ Using 'Envato Support Forum' helps to validate envato purchase code and allow us
 
 There are many other features to help you build better forum:
 
-* Purchase code lists table.
 * Support expired check.
 * And much more.
 
 
 = Be a contributor =
 
-If you want to contribute, go to our [Envato Support Forum GitHub Repository](https://github.com/octagonwebstudio/Premium-Addons-for-KingComposer) and see where you can help.
+If you want to contribute, go to our [Envato Support Forum GitHub Repository](https://github.com/octagonwebstudio/Envato-Support-Forum) and see where you can help.
 
 
 = Liked Envato Support Forum? =
 
-- Any doubts? [Knowledgebase](https://doc.octagonwebstudio.com/octagon-kc-elements/)
+- Any doubts? [Knowledgebase](https://support.octagonwebstudio.com)
 
 == Requirements ==
 
@@ -58,6 +57,14 @@ Simply install as a normal WordPress plugin and activate and it requires bbPress
 
 * It requires bbPress should be activated.
 
+
+== Envato Support Forum Pro ==
+
+* Purchase code lists table( Admin ).
+* Purchase code lists front end( Purchaser ).
+* User can add purchase code in front end.
+
+Join the elite web professionals who enjoy [Envato Support Forum Pro!](https://market.octagonwebstudio.com/product/envato-support-forum-pro/)
 
 == Frequently Asked Questions ==
 
