@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @package Envato Support Forum
+ * @package Support Forum for Envato
  * @author octagonwebstudio
  * @version 1.0
  * @since 1.0
@@ -47,7 +47,7 @@ if( ! class_exists( 'OWS_ESF_Admin_Hooks' ) ) {
 
             add_role(
                 'purchaser',
-                esc_html__( 'Purchaser', 'ows-envato-support-forum' ),
+                esc_html__( 'Purchaser', 'support-forum-for-envato' ),
                 array(
                     'read' => true
                 )
@@ -109,8 +109,8 @@ if( ! class_exists( 'OWS_ESF_Admin_Hooks' ) ) {
          */
         public function manage_users_columns( $columns ) {
 
-            $columns['purchase_codes'] = esc_html__( 'Purchase Codes', 'ows-envato-support-forum' );
-            $columns['items']          = esc_html__( 'Items', 'ows-envato-support-forum' );
+            $columns['purchase_codes'] = esc_html__( 'Purchase Codes', 'support-forum-for-envato' );
+            $columns['items']          = esc_html__( 'Items', 'support-forum-for-envato' );
 
             return $columns;
 

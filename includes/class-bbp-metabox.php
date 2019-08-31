@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @package Envato Support Forum
+ * @package Support Forum for Envato
  * @author octagonwebstudio
  * @version 1.0
  * @since 1.0
@@ -36,9 +36,9 @@ if( ! class_exists( 'OWS_ESF_bbp_Metabox' ) ) {
             ?>
 
             <p>
-                <strong><label for="item-verify-id"><?php esc_html_e( 'Support Item:', 'ows-envato-support-forum' ); ?></label></strong>
+                <strong><label for="item-verify-id"><?php esc_html_e( 'Support Item:', 'support-forum-for-envato' ); ?></label></strong>
                 <select id="item-verify-id" name="ows_esf_item_verify_id">
-                    <option value="0"><?php esc_html_e( 'Choose Item', 'ows-envato-support-forum' ); ?></option>
+                    <option value="0"><?php esc_html_e( 'Choose Item', 'support-forum-for-envato' ); ?></option>
                     <?php
                     if( $author_items ) :
                         foreach( $author_items as $id => $name ) :

@@ -3,7 +3,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Envato Support Forum\n"
+"Project-Id-Version: Support Forum for Envato\n"
 "POT-Creation-Date: 2019-08-15 05:22+0530\n"
 "PO-Revision-Date: 2018-02-12 16:30+0530\n"
 "Last-Translator: Octagon <octagonwebstudio@gmail.com>\n"
@@ -46,7 +46,7 @@ msgid "Choose Item"
 msgstr ""
 
 #: includes/class-bbp-settings.php:35
-msgid "Envato Support Forum"
+msgid "Support Forum for Envato"
 msgstr ""
 
 #: includes/class-bbp-settings.php:57
@@ -94,7 +94,7 @@ msgstr ""
 
 #: includes/class-support-forum.php:33
 msgid ""
-"Envato Support Forum is enabled but not effective. It requires bbPress in "
+"Support Forum for Envato is enabled but not effective. It requires bbPress in "
 "order to work."
 msgstr ""
 

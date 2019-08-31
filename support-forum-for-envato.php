@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: Envato Support Forum
+ * Plugin Name: Support Forum for Envato
  * Plugin URI: https://octagonwebstudio.com
- * Description: Envato Support Forum is allows you to set different user permissions for certain threads according to user envato purchase codes.
+ * Description: Support Forum for Envato is allows you to set different user permissions for certain threads according to user envato purchase codes.
  * Version: 0.1
  * Author: octagonwebstudio
- * Text Domain: ows-envato-support-forum
+ * Text Domain: support-forum-for-envato
  * Requires WP:   5.0
  * Requires PHP:  5.6
  * Domain Path: /languages/
@@ -117,7 +117,7 @@ if( ! class_exists( 'OWS_ESF' ) ) {
          * @since  1.0
          */
         public function load_plugin_textdomain() {
-            load_plugin_textdomain( 'ows-envato-support-forum', false, plugin_basename( dirname( __FILE__ ) ) . '/languages' );
+            load_plugin_textdomain( 'support-forum-for-envato', false, plugin_basename( dirname( __FILE__ ) ) . '/languages' );
         }   
                 
     }

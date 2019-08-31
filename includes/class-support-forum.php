@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @package Envato Support Forum
+ * @package Support Forum for Envato
  * @author octagonwebstudio
  * @version 1.0
  * @since 1.0
@@ -87,7 +87,7 @@ if( ! class_exists( 'OWS_ESF_Init_Forum' ) ) {
             if( ! class_exists( 'bbPress' ) ) {
                 ?>
                 <div class="error">
-                    <p><?php esc_html_e( 'Envato Support Forum is enabled but not effective. It requires bbPress in order to work.', 'octagon-kc-elements' ); ?></p>
+                    <p><?php esc_html_e( 'Support Forum for Envato is enabled but not effective. It requires bbPress in order to work.', 'octagon-kc-elements' ); ?></p>
                 </div>
                 <?php
             }
@@ -213,7 +213,7 @@ if( ! class_exists( 'OWS_ESF_Init_Forum' ) ) {
         public static function init_support_forum() {
 
             $page = array(
-                'post_title'   => esc_html__( 'License Verification', 'ows-envato-support-forum' ),
+                'post_title'   => esc_html__( 'License Verification', 'support-forum-for-envato' ),
                 'post_content' => '[ows-esf-purchase-form]',
                 'post_status'  => 'publish',
                 'post_author'  => 1,
@@ -248,7 +248,7 @@ if( ! class_exists( 'OWS_ESF_Init_Forum' ) ) {
 
                 if( ! $user_id ) { // Must login to access the forum
 
-                    $this->add_notice( 'Please login to access the forum.', 'ows-envato-support-forum' );
+                    $this->add_notice( 'Please login to access the forum.', 'support-forum-for-envato' );
 
                     wp_redirect( wp_login_url( $post_url ) );
                     exit;
@@ -274,7 +274,7 @@ if( ! class_exists( 'OWS_ESF_Init_Forum' ) ) {
                             }
                             else { // Customer purchased but support expired
                                 $support_found = false;
-                                $this->add_notice( 'All of your Purchase code in this forum are expired. Please renew the support.', 'ows-envato-support-forum' );
+                                $this->add_notice( 'All of your Purchase code in this forum are expired. Please renew the support.', 'support-forum-for-envato' );
                             }
                         }
 
@@ -286,7 +286,7 @@ if( ! class_exists( 'OWS_ESF_Init_Forum' ) ) {
                     }
                     else { // Purchase code require to access the forum
 
-                        $this->add_notice( 'Please add purchase code to access the forum.', 'ows-envato-support-forum' );
+                        $this->add_notice( 'Please add purchase code to access the forum.', 'support-forum-for-envato' );
 
                         if( ! $purchase_form_page_url ) {
                             return;
@@ -303,7 +303,7 @@ if( ! class_exists( 'OWS_ESF_Init_Forum' ) ) {
                 $license = isset( $_POST['ows-envato-license'] ) ? sanitize_key( $_POST['ows-envato-license'] ) : '';
 
                 if( empty( $license ) ) { // Purchase code is empty
-                    $this->add_notice( 'Purchase code is required.', 'ows-envato-support-forum' );
+                    $this->add_notice( 'Purchase code is required.', 'support-forum-for-envato' );
                     return;
                 }
 
@@ -312,10 +312,10 @@ if( ! class_exists( 'OWS_ESF_Init_Forum' ) ) {
                 if( isset( $purchase_data['error'] ) ) { // Please check the purchase code
 
                     if( isset( $purchase_data['description'] ) ) {
-                        $this->add_notice( $purchase_data['description'], 'ows-envato-support-forum' );
+                        $this->add_notice( $purchase_data['description'], 'support-forum-for-envato' );
                     }
                     else {
-                        $this->add_notice( $purchase_data['error'], 'ows-envato-support-forum' );
+                        $this->add_notice( $purchase_data['error'], 'support-forum-for-envato' );
                     }
                     
                 }
@@ -326,7 +326,7 @@ if( ! class_exists( 'OWS_ESF_Init_Forum' ) ) {
                         $exist = (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(purchase_code) FROM {$wpdb->prefix}ows_envato_license WHERE purchase_code = %s", $license ) );
 
                         if( $exist ) { // Already you added this purchase code
-                            $this->add_notice( 'Purchase Code already exists.', 'ows-envato-support-forum' );
+                            $this->add_notice( 'Purchase Code already exists.', 'support-forum-for-envato' );
                         }
                         else {
                             $item['id']              = isset( $purchase_data['item']['id'] ) ? absint( $purchase_data['item']['id'] ) : '';
@@ -397,9 +397,9 @@ if( ! class_exists( 'OWS_ESF_Init_Forum' ) ) {
             <div class="envato-verify-form-wrap">
             <div class="notices">'. wp_kses( $notices_html, array( 'p' => array() ) ) .'</div>
             <form action="" method="post" class="envato-verify-form">        
-                <h3 class="title">'. esc_html__( 'Purchase Validation', 'ows-envato-support-forum' ).'</h3>
-                <p class="desc">'. esc_html__( 'Once you enter the valid purchase code it redirects you to the forum.', 'ows-envato-support-forum' ).'</p>
-                <p class="field"><input type="text" id="ows-envato-license" name="ows-envato-license" placeholder="'. esc_attr__( 'Envato Purchase Code', 'ows-envato-support-forum' ).'" class="text" /></p>
+                <h3 class="title">'. esc_html__( 'Purchase Validation', 'support-forum-for-envato' ).'</h3>
+                <p class="desc">'. esc_html__( 'Once you enter the valid purchase code it redirects you to the forum.', 'support-forum-for-envato' ).'</p>
+                <p class="field"><input type="text" id="ows-envato-license" name="ows-envato-license" placeholder="'. esc_attr__( 'Envato Purchase Code', 'support-forum-for-envato' ).'" class="text" /></p>
                 <p class="field"><input name="ows-envato-submit" type="submit" value="Submit" class="btn" /></p>
             </form>
             </div>

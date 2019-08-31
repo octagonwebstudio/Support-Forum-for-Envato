@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @package Envato Support Forum
+ * @package Support Forum for Envato
  * @author octagonwebstudio
  * @version 1.0
  * @since 1.0
@@ -32,7 +32,7 @@ if( ! class_exists( 'OWS_ESF_Settings' ) ) {
         public function admin_settings_sections( $sections ) {
 
             $sections['bbp_settings_envato_support_forum'] = array(
-                'title' => esc_html__( 'Envato Support Forum', 'ows-envato-support-forum' ),
+                'title' => esc_html__( 'Support Forum for Envato', 'support-forum-for-envato' ),
                 'callback' => call_user_func( array( $this, 'bbp_settings_envato_support_forum_callback' ) ),
                 'page'  => 'bbpress'
             );
@@ -54,13 +54,13 @@ if( ! class_exists( 'OWS_ESF_Settings' ) ) {
 
             $settings['bbp_settings_envato_support_forum'] = array(
                 'ows_esf_envato_api_key' => array(
-                    'title'             => esc_html__( 'Envato API Token', 'ows-envato-support-forum' ),
+                    'title'             => esc_html__( 'Envato API Token', 'support-forum-for-envato' ),
                     'callback'          => array( $this, 'settings_callback_envato_api_token' ),
                     'sanitize_callback' => 'sanitize_text_field',
                     'args'              => array()
                 ),
                 'ows_esf_whitelist' => array(
-                    'title'             => esc_html__( 'User Whitelist', 'ows-envato-support-forum' ),
+                    'title'             => esc_html__( 'User Whitelist', 'support-forum-for-envato' ),
                     'callback'          => array( $this, 'settings_callback_whitelist' ),
                     'sanitize_callback' => 'sanitize_text_field',
                     'args'              => array()
@@ -79,7 +79,7 @@ if( ! class_exists( 'OWS_ESF_Settings' ) ) {
 
         public function settings_callback_whitelist() {
             ?>
-            <input name="ows_esf_whitelist" id="ows_esf_whitelist" type="text" value="<?php bbp_form_option( 'ows_esf_whitelist', '' ); ?>" class="regular-text code" /><span><?php esc_html_e( 'Enter User ID separated with commas.', 'ows-envato-support-forum' ); ?></span>
+            <input name="ows_esf_whitelist" id="ows_esf_whitelist" type="text" value="<?php bbp_form_option( 'ows_esf_whitelist', '' ); ?>" class="regular-text code" /><span><?php esc_html_e( 'Enter User ID separated with commas.', 'support-forum-for-envato' ); ?></span>
             <?php
         }
 

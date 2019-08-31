@@ -1,4 +1,4 @@
-=== Envato Support Forum ===
+=== Support Forum for Envato ===
 Contributors: octagonwebstudio
 Tags: forum, support, bbpress, help, topic, thread, discussion
 Requires at least: 4.7
@@ -8,12 +8,12 @@ Stable tag: 0.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Envato Support Forum is allows you to set different user permissions for certain threads according to user envato purchase codes.
+Support Forum for Envato is allows you to set different user permissions for certain threads according to user envato purchase codes.
 
 
 == Description ==
 
-Using 'Envato Support Forum' helps to validate envato purchase code and allow user to create a new topic.
+Using 'Support Forum for Envato' helps to validate envato purchase code and allow user to create a new topic.
 
 There are many other features to help you build better forum:
 
@@ -23,10 +23,10 @@ There are many other features to help you build better forum:
 
 = Be a contributor =
 
-If you want to contribute, go to our [Envato Support Forum GitHub Repository](https://github.com/octagonwebstudio/Envato-Support-Forum) and see where you can help.
+If you want to contribute, go to our [Support Forum for Envato GitHub Repository](https://github.com/octagonwebstudio/Envato-Support-Forum) and see where you can help.
 
 
-= Liked Envato Support Forum? =
+= Liked Support Forum for Envato? =
 
 - Any doubts? [Knowledgebase](https://support.octagonwebstudio.com)
 
@@ -58,13 +58,13 @@ Simply install as a normal WordPress plugin and activate and it requires bbPress
 * It requires bbPress should be activated.
 
 
-== Envato Support Forum Pro ==
+== Support Forum Pro for Envato ==
 
 * Purchase code lists table( Admin ).
 * Purchase code lists front end( Purchaser ).
 * User can add purchase code in front end.
 
-Join the elite web professionals who enjoy [Envato Support Forum Pro!](https://market.octagonwebstudio.com/product/envato-support-forum-pro/)
+Join the elite web professionals who enjoy [Support Forum Pro for Envato!](https://market.octagonwebstudio.com/product/envato-support-forum-pro/)
 
 == Frequently Asked Questions ==
 
@@ -74,7 +74,7 @@ Yes, it will work with any WordPress theme.
 
 = Is this plugin 100% Ads Free? =
 
-Envato Support Forum is 100% Ads Free.
+Support Forum for Envato is 100% Ads Free.
 
 
 == Changelog ==

@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @package Envato Support Forum
+ * @package Support Forum for Envato
  * @author octagonwebstudio
  * @version 1.0
  * @since 1.0
