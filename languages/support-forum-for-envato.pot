@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Support Forum for Envato\n"
-"POT-Creation-Date: 2019-08-15 05:22+0530\n"
+"POT-Creation-Date: 2019-08-31 23:50+0530\n"
 "PO-Revision-Date: 2018-02-12 16:30+0530\n"
 "Last-Translator: Octagon <octagonwebstudio@gmail.com>\n"
 "Language-Team: Octagon Web Studio <octagonwebstudio@gmail.com>\n"
@@ -19,21 +19,15 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: includes/class-admin-hooks.php:38 includes/class-admin-hooks.php:39
-#: views/html-licence-table.php:18
-msgid "Licenses"
-msgstr ""
-
-#: includes/class-admin-hooks.php:72 includes/class-admin-hooks.php:168
-#: includes/class-license-table.php:25
-msgid "Purchase Codes"
-msgstr ""
-
-#: includes/class-admin-hooks.php:107
+#: includes/class-admin-hooks.php:50
 msgid "Purchaser"
 msgstr ""
 
-#: includes/class-admin-hooks.php:169
+#: includes/class-admin-hooks.php:112
+msgid "Purchase Codes"
+msgstr ""
+
+#: includes/class-admin-hooks.php:113
 msgid "Items"
 msgstr ""
 
@@ -41,7 +35,7 @@ msgstr ""
 msgid "Support Item:"
 msgstr ""
 
-#: includes/class-bbp-metabox.php:44
+#: includes/class-bbp-metabox.php:41
 msgid "Choose Item"
 msgstr ""
 
@@ -53,55 +47,32 @@ msgstr ""
 msgid "Envato API Token"
 msgstr ""
 
-#: includes/class-license-table.php:24 includes/class-license-table.php:204
-msgid "Purchase Code"
+#: includes/class-bbp-settings.php:63
+msgid "User Whitelist"
 msgstr ""
 
-#: includes/class-license-table.php:93
-msgid "Purchase codes not avaliable."
+#: includes/class-bbp-settings.php:82
+msgid "Enter User ID separated with commas."
 msgstr ""
 
-#: includes/class-license-table.php:134 includes/class-license-table.php:158
-#: includes/class-license-table.php:170
-#, php-format
-msgid "<p>%s</p>"
-msgstr ""
-
-#: includes/class-license-table.php:146
-#, php-format
-msgid "<p>%d</p>"
-msgstr ""
-
-#: includes/class-license-table.php:205
-msgid "Envato Buyer"
-msgstr ""
-
-#: includes/class-license-table.php:206
-msgid "Item Name"
-msgstr ""
-
-#: includes/class-license-table.php:207
-msgid "Item ID"
-msgstr ""
-
-#: includes/class-license-table.php:208
-msgid "License Type"
-msgstr ""
-
-#: includes/class-license-table.php:209
-msgid "User"
-msgstr ""
-
-#: includes/class-support-forum.php:33
+#: includes/class-support-forum.php:90
 msgid ""
 "Support Forum for Envato is enabled but not effective. It requires bbPress in "
 "order to work."
 msgstr ""
 
-#: includes/class-support-forum.php:49
+#: includes/class-support-forum.php:216
 msgid "License Verification"
 msgstr ""
 
-#: includes/class-support-forum.php:213
+#: includes/class-support-forum.php:408
+msgid "Purchase Validation"
+msgstr ""
+
+#: includes/class-support-forum.php:409
+msgid "Once you enter the valid purchase code it redirects you to the forum."
+msgstr ""
+
+#: includes/class-support-forum.php:410
 msgid "Envato Purchase Code"
 msgstr ""

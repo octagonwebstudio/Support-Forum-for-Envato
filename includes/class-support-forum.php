@@ -301,6 +301,12 @@ if( ! class_exists( 'OWS_ESF_Init_Forum' ) ) {
             if( isset( $_POST['ows-envato-submit'] ) ) {
 
                 $license = isset( $_POST['ows-envato-license'] ) ? sanitize_key( $_POST['ows-envato-license'] ) : '';
+                $nonce = isset( $_POST['nonce'] ) ? $_POST['nonce'] : array();
+
+                if( ! wp_verify_nonce( $nonce, 'nonce-envato-verify-form' ) || ! current_user_can( 'read' ) ) {
+                    $this->add_notice( 'Naughty work fails.', 'support-forum-for-envato' );
+                    return;
+                }
 
                 if( empty( $license ) ) { // Purchase code is empty
                     $this->add_notice( 'Purchase code is required.', 'support-forum-for-envato' );
@@ -391,7 +397,9 @@ if( ! class_exists( 'OWS_ESF_Init_Forum' ) ) {
                         $notices_html .= '<p>'. esc_html( $notice ) .'</p>';
                     }                    
                 }
-            }            
+            }
+
+            $nonce = wp_create_nonce( 'nonce-envato-verify-form' );
 
             $form = '
             <div class="envato-verify-form-wrap">
@@ -400,6 +408,7 @@ if( ! class_exists( 'OWS_ESF_Init_Forum' ) ) {
                 <h3 class="title">'. esc_html__( 'Purchase Validation', 'support-forum-for-envato' ).'</h3>
                 <p class="desc">'. esc_html__( 'Once you enter the valid purchase code it redirects you to the forum.', 'support-forum-for-envato' ).'</p>
                 <p class="field"><input type="text" id="ows-envato-license" name="ows-envato-license" placeholder="'. esc_attr__( 'Envato Purchase Code', 'support-forum-for-envato' ).'" class="text" /></p>
+                <p class="field hidden"><input type="hidden" name="nonce" value="'. esc_attr( $nonce ) .'"></p>
                 <p class="field"><input name="ows-envato-submit" type="submit" value="Submit" class="btn" /></p>
             </form>
             </div>

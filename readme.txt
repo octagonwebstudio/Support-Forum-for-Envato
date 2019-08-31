@@ -23,7 +23,7 @@ There are many other features to help you build better forum:
 
 = Be a contributor =
 
-If you want to contribute, go to our [Support Forum for Envato GitHub Repository](https://github.com/octagonwebstudio/Envato-Support-Forum) and see where you can help.
+If you want to contribute, go to our [Support Forum for Envato GitHub Repository](https://github.com/octagonwebstudio/Support-Forum-for-Envato) and see where you can help.
 
 
 = Liked Support Forum for Envato? =
@@ -64,7 +64,7 @@ Simply install as a normal WordPress plugin and activate and it requires bbPress
 * Purchase code lists front end( Purchaser ).
 * User can add purchase code in front end.
 
-Join the elite web professionals who enjoy [Support Forum Pro for Envato!](https://market.octagonwebstudio.com/product/envato-support-forum-pro/)
+Join the elite web professionals who enjoy [Support Forum Pro for Envato!](https://market.octagonwebstudio.com/product/support-forum-pro-for-envato/)
 
 == Frequently Asked Questions ==
 
