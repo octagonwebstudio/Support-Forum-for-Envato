@@ -46,35 +46,30 @@ if( ! class_exists( 'OWS_ESF_Tools' ) ) {
          */
         public static function run_api_process( $url = '' ) {
 
-			$envato_api_key = get_option( 'ows_esf_envato_api_key' );
+            $envato_api_key = get_option( 'ows_esf_envato_api_key' );
 
-			if( '' == $url || '' == $envato_api_key ) {
-			    return false;
-			}
+            if( '' == $url || '' == $envato_api_key ) {
+                return false;
+            }
 
-			$headers = array( 
-			    'Authorization: Bearer '. $envato_api_key 
-			); 
+            $headers = array(
+                'Authorization' => 'Bearer '. $envato_api_key
+            );
 
-			$ch = curl_init(); 
-			curl_setopt( $ch, CURLOPT_URL, $url ); 
-			curl_setopt( $ch, CURLOPT_HTTPHEADER, $headers );
-			curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+            $args = array(
+                'user-agent' => esc_html__( 'Purchase code verification', 'support-forum-for-envato' ),
+                'headers'    => $headers
+            );
 
-			$data = curl_exec( $ch ); 
+            $response = wp_remote_get( $url, $args );
 
-			if( curl_errno( $ch ) ) { 
-			    $ret['error'] = curl_error( $ch ); 
-			}
-			else { 
-			    $ret = json_decode( $data, true ); 
-			    
-			    curl_close( $ch ); 
-			}
+            $body = wp_remote_retrieve_body( $response );
 
-			return $ret;
+            $data = json_decode( $body );
 
-		}
+            return $data;
+
+        }
 
         /**
          * Return purchase data

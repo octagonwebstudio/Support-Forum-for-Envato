@@ -226,6 +226,8 @@ if( ! class_exists( 'OWS_ESF_Init_Forum' ) ) {
 
         }
 
+        
+
         /**
          * bbPress check purchase code and process
          * 
@@ -298,7 +300,7 @@ if( ! class_exists( 'OWS_ESF_Init_Forum' ) ) {
                 }                
             }
 
-            if( isset( $_POST['ows-envato-submit'] ) ) {
+            if( isset( $_POST['ows-envato-submit'] ) ) {                
 
                 $license = isset( $_POST['ows-envato-license'] ) ? sanitize_key( $_POST['ows-envato-license'] ) : '';
                 $nonce = isset( $_POST['nonce'] ) ? $_POST['nonce'] : array();
@@ -315,19 +317,19 @@ if( ! class_exists( 'OWS_ESF_Init_Forum' ) ) {
 
                 $purchase_data = OWS_ESF_Tools()->get_purchase_data( $license );
 
-                if( isset( $purchase_data['error'] ) ) { // Please check the purchase code
+                if( isset( $purchase_data ) && null != $purchase_data->error ) { // Please check the purchase code
 
-                    if( isset( $purchase_data['description'] ) ) {
-                        $this->add_notice( $purchase_data['description'], 'support-forum-for-envato' );
+                    if( null != $purchase_data->description ) {
+                        $this->add_notice( $purchase_data->description, 'support-forum-for-envato' );
                     }
                     else {
-                        $this->add_notice( $purchase_data['error'], 'support-forum-for-envato' );
+                        $this->add_notice( $purchase_data->error, 'support-forum-for-envato' );
                     }
                     
                 }
                 else {
 
-                    if( isset( $purchase_data['item']['id'] ) ) {
+                    if( null != $purchase_data->item->id ) {
 
                         $exist = (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(purchase_code) FROM {$wpdb->prefix}ows_envato_license WHERE purchase_code = %s", $license ) );
 
@@ -335,11 +337,11 @@ if( ! class_exists( 'OWS_ESF_Init_Forum' ) ) {
                             $this->add_notice( 'Purchase Code already exists.', 'support-forum-for-envato' );
                         }
                         else {
-                            $item['id']              = isset( $purchase_data['item']['id'] ) ? absint( $purchase_data['item']['id'] ) : '';
-                            $item['name']            = isset( $purchase_data['item']['name'] ) ? sanitize_text_field( $purchase_data['item']['name'] ) : '';
-                            $item['supported_until'] = isset( $purchase_data['supported_until'] ) ? sanitize_text_field( $purchase_data['supported_until'] ) : '';
-                            $item['license']         = isset( $purchase_data['license'] ) ? sanitize_text_field( $purchase_data['license'] ) : '';
-                            $item['buyer']           = isset( $purchase_data['buyer'] ) ? sanitize_text_field( $purchase_data['buyer'] ) : '';
+                            $item['id']              = null != $purchase_data->item->id ? absint( $purchase_data->item->id ) : '';
+                            $item['name']            = null != $purchase_data->item->name ? sanitize_text_field( $purchase_data->item->name ) : '';
+                            $item['supported_until'] = null != $purchase_data->supported_until ? sanitize_text_field( $purchase_data->supported_until ) : '';
+                            $item['license']         = null != $purchase_data->license ? sanitize_text_field( $purchase_data->license ) : '';
+                            $item['buyer']           = null != $purchase_data->buyer ? sanitize_text_field( $purchase_data->buyer ) : '';
 
                             if( empty( $user_item ) ) {
 

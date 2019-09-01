@@ -7,6 +7,38 @@
  */
 
 /* ---------------------------------------------------------------------------
+ * General
+------------------------------------------------------------------------------ */
+
+body {
+    position: relative;
+}
+
+.notices {
+    color: #ef2525;
+}
+
+.floating-icons {
+    position: absolute;
+    right: 20px;
+    bottom: 60px;
+}
+
+table {
+    background: #fff;
+}
+
+th {
+    font-weight: 600;
+}
+
+th,
+td {
+    padding: 20px 30px;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+/* ---------------------------------------------------------------------------
  * Verfication Form
 ------------------------------------------------------------------------------ */
 
@@ -17,6 +49,14 @@
     padding: 50px;
     width: 400px;
     border-radius: 10px;
+}
+
+.envato-verify-form-wrap.full-width-form {
+    text-align: left;
+    margin: 0 0 50px 0;
+    width: 100%;
+    border-radius: 0;
+    overflow: hidden;
 }
 
 .envato-verify-form .title {
@@ -60,6 +100,12 @@
     box-shadow: none;
 }
 
-.notices {
-    color: #ef2525;
+.envato-verify-form-wrap.full-width-form .field {
+    margin: 0;
+    float: left;
+}
+
+.envato-verify-form-wrap.full-width-form .field .text,
+.envato-verify-form-wrap.full-width-form .field .btn {    
+    width: auto;
 }
