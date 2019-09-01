@@ -11,9 +11,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
     
-if( ! class_exists( 'OWS_ESF_bbp_Metabox' ) ) {
+if( ! class_exists( 'SFE_bbp_Metabox' ) ) {
 
-    class OWS_ESF_bbp_Metabox {
+    class SFE_bbp_Metabox {
 
         public function __construct() {
 
@@ -30,14 +30,14 @@ if( ! class_exists( 'OWS_ESF_bbp_Metabox' ) ) {
          */
         public function bbp_forum_metabox( $forum_id ) {
 
-            $current_item = get_post_meta( $forum_id, 'ows_esf_item_verify_id', true );
+            $current_item = get_post_meta( $forum_id, 'sfe_item_verify_id', true );
 
-            $author_items = OWS_ESF_Tools()->get_author_items();
+            $author_items = SFE_Tools()->get_author_items();
             ?>
 
             <p>
                 <strong><label for="item-verify-id"><?php esc_html_e( 'Support Item:', 'support-forum-for-envato' ); ?></label></strong>
-                <select id="item-verify-id" name="ows_esf_item_verify_id">
+                <select id="item-verify-id" name="sfe_item_verify_id">
                     <option value="0"><?php esc_html_e( 'Choose Item', 'support-forum-for-envato' ); ?></option>
                     <?php
                     if( $author_items ) :
@@ -66,13 +66,13 @@ if( ! class_exists( 'OWS_ESF_bbp_Metabox' ) ) {
                 return;
             }
 
-            if( isset( $_POST['ows_esf_item_verify_id'] ) ) {
+            if( isset( $_POST['sfe_item_verify_id'] ) ) {
 
-                $author_items = OWS_ESF_Tools()->get_author_items();
+                $author_items = SFE_Tools()->get_author_items();
 
-                if( array_key_exists( $_POST['ows_esf_item_verify_id'], $author_items ) ) {
+                if( array_key_exists( $_POST['sfe_item_verify_id'], $author_items ) ) {
 
-                    update_post_meta( $forum_id, 'ows_esf_item_verify_id', absint( $_POST['ows_esf_item_verify_id'] ) );
+                    update_post_meta( $forum_id, 'sfe_item_verify_id', absint( $_POST['sfe_item_verify_id'] ) );
                 }
             }
 
@@ -80,6 +80,6 @@ if( ! class_exists( 'OWS_ESF_bbp_Metabox' ) ) {
 
     }
 
-    new OWS_ESF_bbp_Metabox;
+    new SFE_bbp_Metabox;
 
 }

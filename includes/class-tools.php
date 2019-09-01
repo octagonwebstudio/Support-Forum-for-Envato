@@ -11,9 +11,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
     
-if( ! class_exists( 'OWS_ESF_Tools' ) ) {
+if( ! class_exists( 'SFE_Tools' ) ) {
 
-    class OWS_ESF_Tools {
+    class SFE_Tools {
 
     	/**
          * The single instance of the class.
@@ -46,7 +46,7 @@ if( ! class_exists( 'OWS_ESF_Tools' ) ) {
          */
         public static function run_api_process( $url = '' ) {
 
-            $envato_api_key = get_option( 'ows_esf_envato_api_key' );
+            $envato_api_key = get_option( 'sfe_envato_api_key' );
 
             if( '' == $url || '' == $envato_api_key ) {
                 return false;
@@ -143,12 +143,12 @@ if( ! class_exists( 'OWS_ESF_Tools' ) ) {
  *
  * @version 1.0
  * @since  1.0
- * @return OWS_ESF_Tools
+ * @return SFE_Tools
  */
-if( ! function_exists( 'OWS_ESF_Tools' ) ) {
-    function OWS_ESF_Tools() {
-        return OWS_ESF_Tools::instance();
+if( ! function_exists( 'SFE_Tools' ) ) {
+    function SFE_Tools() {
+        return SFE_Tools::instance();
     }
 }
 
-$GLOBALS['ows-esf-tools'] = OWS_ESF_Tools();
+$GLOBALS['sfe-tools'] = SFE_Tools();

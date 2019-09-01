@@ -11,9 +11,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
 	
-if( ! class_exists( 'OWS_ESF_Admin_Hooks' ) ) {
+if( ! class_exists( 'SFE_Admin_Hooks' ) ) {
 
-	class OWS_ESF_Admin_Hooks {
+	class SFE_Admin_Hooks {
 
 		public function __construct() {
 
@@ -85,7 +85,7 @@ if( ! class_exists( 'OWS_ESF_Admin_Hooks' ) ) {
             }
 
             $tables = "
-            CREATE TABLE {$wpdb->prefix}ows_envato_license (
+            CREATE TABLE {$wpdb->prefix}sfe_envato_license (
               id INT(11) NOT NULL AUTO_INCREMENT,
               item_id VARCHAR(55) NOT NULL,
               item_name VARCHAR(100) NOT NULL,
@@ -124,7 +124,7 @@ if( ! class_exists( 'OWS_ESF_Admin_Hooks' ) ) {
          */
         public function manage_users_custom_column( $retval = '', $column = '', $user_id = 0 ) {
 
-        	$user_item = get_user_meta( $user_id, 'ows_esf_user_item', true );
+        	$user_item = get_user_meta( $user_id, 'sfe_user_item', true );
 
         	if( 'purchase_codes' ==  $column ) {        		
         		return is_array( $user_item ) ? count( $user_item ) : 0;
@@ -144,6 +144,6 @@ if( ! class_exists( 'OWS_ESF_Admin_Hooks' ) ) {
 
 	}
 
-	new OWS_ESF_Admin_Hooks;
+	new SFE_Admin_Hooks;
 
 }

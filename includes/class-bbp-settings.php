@@ -11,9 +11,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
     
-if( ! class_exists( 'OWS_ESF_Settings' ) ) {
+if( ! class_exists( 'SFE_Settings' ) ) {
 
-    class OWS_ESF_Settings {
+    class SFE_Settings {
 
         public function __construct() {
 
@@ -53,13 +53,13 @@ if( ! class_exists( 'OWS_ESF_Settings' ) ) {
         public function admin_settings_field( $settings ) {
 
             $settings['bbp_settings_envato_support_forum'] = array(
-                'ows_esf_envato_api_key' => array(
+                'sfe_envato_api_key' => array(
                     'title'             => esc_html__( 'Envato API Token', 'support-forum-for-envato' ),
                     'callback'          => array( $this, 'settings_callback_envato_api_token' ),
                     'sanitize_callback' => 'sanitize_text_field',
                     'args'              => array()
                 ),
-                'ows_esf_whitelist' => array(
+                'sfe_whitelist' => array(
                     'title'             => esc_html__( 'User Whitelist', 'support-forum-for-envato' ),
                     'callback'          => array( $this, 'settings_callback_whitelist' ),
                     'sanitize_callback' => 'sanitize_text_field',
@@ -73,13 +73,13 @@ if( ! class_exists( 'OWS_ESF_Settings' ) ) {
 
         public function settings_callback_envato_api_token() {
             ?>
-            <input name="ows_esf_envato_api_key" id="ows_esf_envato_api_key" type="text" value="<?php bbp_form_option( 'ows_esf_envato_api_key', '' ); ?>" class="regular-text code" />
+            <input name="sfe_envato_api_key" id="sfe_envato_api_key" type="text" value="<?php bbp_form_option( 'sfe_envato_api_key', '' ); ?>" class="regular-text code" />
             <?php
         }
 
         public function settings_callback_whitelist() {
             ?>
-            <input name="ows_esf_whitelist" id="ows_esf_whitelist" type="text" value="<?php bbp_form_option( 'ows_esf_whitelist', '' ); ?>" class="regular-text code" /><span><?php esc_html_e( 'Enter User ID separated with commas.', 'support-forum-for-envato' ); ?></span>
+            <input name="sfe_whitelist" id="sfe_whitelist" type="text" value="<?php bbp_form_option( 'sfe_whitelist', '' ); ?>" class="regular-text code" /><span><?php esc_html_e( 'Enter User ID separated with commas.', 'support-forum-for-envato' ); ?></span>
             <?php
         }
 
@@ -100,6 +100,6 @@ if( ! class_exists( 'OWS_ESF_Settings' ) ) {
 
     }
 
-    new OWS_ESF_Settings;
+    new SFE_Settings;
 
 }

@@ -15,9 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
     
-if( ! class_exists( 'OWS_ESF' ) ) {
+if( ! class_exists( 'SFE' ) ) {
 
-    class OWS_ESF {
+    class SFE {
 
         /**
          * Core Version.
@@ -57,7 +57,7 @@ if( ! class_exists( 'OWS_ESF' ) ) {
             $this->includes();
             $this->hooks();
 
-            do_action( 'ows_esf_loaded' );
+            do_action( 'sfe_loaded' );
             
         }
 
@@ -65,11 +65,11 @@ if( ! class_exists( 'OWS_ESF' ) ) {
          * Define Constants.
          */
         private function define_constants() {
-            $this->define( 'OWS_ESF_VERSION', $this->version );
-            $this->define( 'OWS_ESF_FILE', __FILE__ );
-            $this->define( 'OWS_ESF_BASENAME', plugin_basename( __FILE__ ) );
-            $this->define( 'OWS_ESF_PATH', plugin_dir_path( __FILE__ ) );
-            $this->define( 'OWS_ESF_URL', plugin_dir_url( __FILE__ ) );
+            $this->define( 'SFE_VERSION', $this->version );
+            $this->define( 'SFE_FILE', __FILE__ );
+            $this->define( 'SFE_BASENAME', plugin_basename( __FILE__ ) );
+            $this->define( 'SFE_PATH', plugin_dir_path( __FILE__ ) );
+            $this->define( 'SFE_URL', plugin_dir_url( __FILE__ ) );
         }
 
         /**
@@ -91,12 +91,12 @@ if( ! class_exists( 'OWS_ESF' ) ) {
          */
         public function includes() {
 
-            include_once OWS_ESF_PATH . '/includes/class-tools.php';
-            include_once OWS_ESF_PATH . '/includes/class-admin-hooks.php';
-            include_once OWS_ESF_PATH . '/includes/class-support-forum.php';
-            include_once OWS_ESF_PATH . '/includes/class-bbp-settings.php';
-            include_once OWS_ESF_PATH . '/includes/class-bbp-metabox.php';
-            include_once OWS_ESF_PATH . '/includes/class-enqueue-scripts.php';
+            include_once SFE_PATH . '/includes/class-tools.php';
+            include_once SFE_PATH . '/includes/class-admin-hooks.php';
+            include_once SFE_PATH . '/includes/class-support-forum.php';
+            include_once SFE_PATH . '/includes/class-bbp-settings.php';
+            include_once SFE_PATH . '/includes/class-bbp-metabox.php';
+            include_once SFE_PATH . '/includes/class-enqueue-scripts.php';
             
         }
 
@@ -106,7 +106,7 @@ if( ! class_exists( 'OWS_ESF' ) ) {
          * @since 1.0
          */
         private function hooks() {
-            register_activation_hook( OWS_ESF_FILE, array( 'OWS_ESF_Init_Forum', 'init_support_forum' ) );
+            register_activation_hook( SFE_FILE, array( 'SFE_Init_Forum', 'init_support_forum' ) );
             
             add_action( 'plugins_loaded', array( $this, 'load_plugin_textdomain' ) );
         }
@@ -130,12 +130,12 @@ if( ! class_exists( 'OWS_ESF' ) ) {
  *
  * @version 1.0
  * @since  1.0
- * @return OWS_ESF
+ * @return SFE
  */
-if( ! function_exists( 'OWS_ESF' ) ) {
-    function OWS_ESF() {
-        return OWS_ESF::instance();
+if( ! function_exists( 'SFE' ) ) {
+    function SFE() {
+        return SFE::instance();
     }
 }
 
-$GLOBALS['ows-esf'] = OWS_ESF();
+$GLOBALS['sfe'] = SFE();

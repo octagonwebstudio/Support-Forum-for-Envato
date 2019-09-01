@@ -11,9 +11,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
 
-if( ! class_exists( 'OWS_ESF_Enqueue_scripts' ) ) {
+if( ! class_exists( 'SFE_Enqueue_scripts' ) ) {
 
-	class OWS_ESF_Enqueue_scripts {
+	class SFE_Enqueue_scripts {
 
 		public function __construct() {
 
@@ -32,11 +32,11 @@ if( ! class_exists( 'OWS_ESF_Enqueue_scripts' ) ) {
 			 * CSS
 			------------------------------------------------------------------------------ */
 
-			wp_enqueue_style( 'ows-esf-support-forum', OWS_ESF_URL .'assets/css/support-forum.css', array(), '1.0', 'all' );
+			wp_enqueue_style( 'sfe-support-forum', SFE_URL .'assets/css/support-forum.css', array(), '1.0', 'all' );
 		}
 
 	}
 
-	new OWS_ESF_Enqueue_scripts;
+	new SFE_Enqueue_scripts;
 
 }
