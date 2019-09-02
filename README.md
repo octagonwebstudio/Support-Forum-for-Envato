@@ -5,7 +5,7 @@
 **Requires at least:** 4.7  
 **Tested up to:** 5.2.2  
 **Requires PHP:** 5.6  
-**Stable tag:** 0.1  
+**Stable tag:** 1.0  
 **License:** GPLv3  
 **License URI:** https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -15,6 +15,8 @@ Support Forum for Envato is allows you to set different user permissions for cer
 ## Description ##
 
 Using 'Support Forum for Envato' helps to validate envato purchase code and allow user to create a new topic.
+
+[Demo](https://addons.octagonwebstudio.com/support-forum-for-envato/)
 
 There are many other features to help you build better websites:
 
@@ -82,5 +84,5 @@ Support Forum for Envato is 100% Ads Free.
 
 ## Changelog ##
 
-### 0.1 - Aug 27 2019 ###
-* Info: Initial Public Beta Release
+### 1.0 - Sep 02 2019 ###
+* Info: Initial Release.

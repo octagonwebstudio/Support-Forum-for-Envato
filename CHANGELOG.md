@@ -1,4 +1,4 @@
 ## Changelog
 
-= 0.1 - Aug 27 2019 =
-* Info: Initial Public Beta Release
+### 1.0 - Sep 02 2019 ###
+* Info: Initial Release.
