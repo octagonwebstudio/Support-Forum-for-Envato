@@ -3,7 +3,7 @@
  * Plugin Name: Support Forum for Envato
  * Plugin URI: https://octagonwebstudio.com
  * Description: Support Forum for Envato is allows you to set different user permissions for certain threads according to user envato purchase codes.
- * Version: 1.0
+ * Version: 1.0.1
  * Author: octagonwebstudio
  * Text Domain: support-forum-for-envato
  * Requires WP:   5.0
@@ -23,7 +23,7 @@ if( ! class_exists( 'SFE' ) ) {
          * Core Version.
          *
          */
-        public $version = '1.0';
+        public $version = '1.0.1';
 
         /**
          * The single instance of the class.

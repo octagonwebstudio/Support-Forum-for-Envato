@@ -97,9 +97,9 @@ if( ! class_exists( 'SFE_Tools' ) ) {
 
             $url = 'https://api.envato.com/v1/market/private/user/username.json';
 
-            $username = self::run_api_process( $url );
+            $data = self::run_api_process( $url );
 
-            if( ! isset( $username['username'] ) ) {
+            if( ! $data || null == $data->username ) {
                 return false;
             }
 
@@ -107,13 +107,13 @@ if( ! class_exists( 'SFE_Tools' ) ) {
 
             for( $i=1; $i < 10; $i++ ) { 
 
-                $author_items_url = 'https://api.envato.com/v1/discovery/search/search/item?username='. esc_attr( $username['username'] ) .'&page_size=100&page='.$i;
+                $author_items_url = 'https://api.envato.com/v1/discovery/search/search/item?username='. esc_attr( $data->username ) .'&page_size=100&page='.$i;
 
                 $author_items = self::run_api_process( $author_items_url );
 
-                $total_items = array_merge( $total_items, $author_items['matches'] );
+                $total_items = array_merge( $total_items, $author_items->matches );
 
-                if( count( $author_items['matches'] ) < 100 ) {
+                if( count( $author_items->matches ) < 100 ) {
                     break;
                 }
             }
@@ -122,8 +122,8 @@ if( ! class_exists( 'SFE_Tools' ) ) {
 
             if( ! empty( $total_items ) ) {
                 foreach( $total_items as $key => $item ) {
-                    if( isset( $item['id'] ) && isset( $item['name'] ) ) {
-                        $author_items[$item['id']] = $item['name'];
+                    if( isset( $item ) && null != $item->id && null != $item->name ) {
+                        $author_items[$item->id] = $item->name;
                     }
                 }
             }

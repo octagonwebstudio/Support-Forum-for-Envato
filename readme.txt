@@ -4,7 +4,7 @@ Tags: forum, support, bbpress, help, topic, thread, discussion
 Requires at least: 4.7
 Tested up to: 5.2.2
 Requires PHP: 5.6
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -80,6 +80,9 @@ Support Forum for Envato is 100% Ads Free.
 
 
 == Changelog ==
+
+= 1.0.1 - Sep 03 2019 =
+* Fix: Author items loads issue fixed.
 
 = 1.0 - Sep 02 2019 =
 * Info: Initial Release.

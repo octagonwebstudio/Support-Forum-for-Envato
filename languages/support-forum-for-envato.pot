@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Support Forum for Envato\n"
-"POT-Creation-Date: 2019-08-31 23:50+0530\n"
+"POT-Creation-Date: 2019-09-03 01:41+0530\n"
 "PO-Revision-Date: 2018-02-12 16:30+0530\n"
 "Last-Translator: Octagon <octagonwebstudio@gmail.com>\n"
 "Language-Team: Octagon Web Studio <octagonwebstudio@gmail.com>\n"
@@ -65,14 +65,18 @@ msgstr ""
 msgid "License Verification"
 msgstr ""
 
-#: includes/class-support-forum.php:408
+#: includes/class-support-forum.php:410
 msgid "Purchase Validation"
 msgstr ""
 
-#: includes/class-support-forum.php:409
+#: includes/class-support-forum.php:411
 msgid "Once you enter the valid purchase code it redirects you to the forum."
 msgstr ""
 
-#: includes/class-support-forum.php:410
+#: includes/class-support-forum.php:412
 msgid "Envato Purchase Code"
+msgstr ""
+
+#: includes/class-tools.php:60
+msgid "Purchase code verification"
 msgstr ""
